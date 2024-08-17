@@ -35,7 +35,7 @@ const Signup = () => {
     dispatch({ type: LOGIN_SUCCESS, payload:istokenvalid });
 
     const tokenvalidationstatus = useSelector((store)=> (store.authreducer.isAuth))
-    console.log(tokenvalidationstatus,"tokenvalidationstatus")
+
        if(tokenvalidationstatus){
         return <Navigate to={"/"}></Navigate>
     }else{
