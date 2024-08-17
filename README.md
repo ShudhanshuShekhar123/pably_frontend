@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Task Management Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description :This web application allows users to efficiently manage their tasks. Users can create new tasks, edit and update existing tasks, and delete tasks as needed. Additionally, users can set the priority level for each task (e.g., Low, Medium, High), helping them organize their workload more effectively. The app is fully responsive, ensuring a seamless experience across devices, whether on a desktop, tablet, or mobile phone.
 
-## Available Scripts
+Tech Stack:
+- React.js: For building the user interface.
+- Tailwind CSS: For styling the application with utility-first CSS.
+- React Redux: For state management across the app.
+- React Toastify: For displaying toast notifications.
+- JWT-Decode: For decoding JSON Web Tokens.
+- Node.js: For handling server-side logic.
+- Express.js: As the web framework for Node.js.
+- MongoDB: For storing task data.
+- Mongoose: For interacting with MongoDB.
+- Axios: For making HTTP requests to the backend.
 
-In the project directory, you can run:
+Features:
+- Users can create new tasks.
+- Tasks can be edited and updated.
+- Users can delete tasks.
+- Task priorities can be set to low, medium, or high.
+- User authentication and registration are implemented.
+- Error handling is in place to ensure smooth operation.
+- The app is fully responsive, adapting to various screen sizes for a seamless user experience.
 
-### `npm start`
+Getting Started:
+- Clone this repository to your local machine.
+- Navigate to the project directory.
+- Run npm install to install dependencies.
+- Run npm start to start the development server.
+- Open your browser and navigate to http://localhost:3000 to view the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Preview:
+![Screenshot 2024-08-17 214145](https://github.com/user-attachments/assets/8b898ee4-dedc-4540-8b46-ae624e88c2a4)
+![Screenshot 2024-08-17 214210](https://github.com/user-attachments/assets/8e7144c6-f36a-4e67-aae8-ace5ea071a0f)
+![Screenshot 2024-08-17 214653](https://github.com/user-attachments/assets/f9df1701-0ceb-4f51-a3f4-10841fc7c2d2)
+![Screenshot 2024-08-17 214640](https://github.com/user-attachments/assets/3d1425d0-3be1-4720-bdc8-6296220dc06a)
+![Screenshot 2024-08-17 214621](https://github.com/user-attachments/assets/59dbf00a-651e-4ef8-802e-deb4d02971bc)
+![Screenshot 2024-08-17 214530](https://github.com/user-attachments/assets/b709a716-46a6-4682-9e13-aa79b4d6c944)
+![Screenshot 2024-08-17 214510](https://github.com/user-attachments/assets/419ff560-11d0-44e3-aade-4aec97490b31)
+![Screenshot 2024-08-17 214455](https://github.com/user-attachments/assets/cb32e92e-7aa1-4691-88ce-e242b2a843a0)
+![Screenshot 2024-08-17 214431](https://github.com/user-attachments/assets/20a6d170-1780-436d-b76f-750470ca588e)
+![Screenshot 2024-08-17 214404](https://github.com/user-attachments/assets/a8e31b26-e965-48ef-8965-8732d9e7a61b)
+![Screenshot 2024-08-17 214310](https://github.com/user-attachments/assets/6d86b477-2d79-4ff8-953b-53768a2d5bba)
+![Screenshot 2024-08-17 214301](https://github.com/user-attachments/assets/2f79627b-4fb5-4c63-98f0-66e513581b6a)
+![Screenshot 2024-08-17 214254](https://github.com/user-attachments/assets/7e1b8f08-e7f5-488a-a84e-aba5cd20831d)
+![Screenshot 2024-08-17 214243](https://github.com/user-attachments/assets/73cf87a3-25f7-4afc-bcae-a4a9f9d3676b)
+![Screenshot 2024-08-17 214231](https://github.com/user-attachments/assets/cd25ba91-b5eb-4c30-936f-71aeb9944d09)
