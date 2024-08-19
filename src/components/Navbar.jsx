@@ -9,7 +9,7 @@ import { TASK_DELETE } from '../Redux/Taskreducer/actiontype'
 
 
 
-const notify = () => toast.warn('User logged out  Successfully', {
+const notify = () => toast.success('User logged out  Successfully', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,

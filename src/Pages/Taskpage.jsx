@@ -4,12 +4,26 @@ import React, { useEffect, useState } from 'react';
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { url } from '../baseserverurl';
 import Card from '../components/Card';
 import { addtask, createtask } from '../Redux/Taskreducer/action';
 import { TASK_DELETE } from '../Redux/Taskreducer/actiontype';
 
+const notify1 = () => toast.warn('Please fill all fields!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    transition: Zoom
+
+
+})
 
 
 const Taskpage = () => {
@@ -87,11 +101,9 @@ const Taskpage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+    
 
-        if ((status == "nothing") || (priority == "nothing") || (duedate == "nothing")) {
-            return alert("select current status")
-        }
-
+      console.log(priority, status, duedate,"staus, prirotiy, duedtae")
 
 
         const data = {
@@ -104,7 +116,7 @@ const Taskpage = () => {
         };
 
         dispatch(createtask(data))
-
+    
         setTitle('');
         setDescription('');
         setIsOpen(false);
@@ -130,7 +142,6 @@ const Taskpage = () => {
 
 
     const handleselectpriority = (e) => {
-
 
         setpriority(e.target.value)
 
@@ -329,7 +340,7 @@ const Taskpage = () => {
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-start text-gray-900">
                                     Status
                                 </label>
-                                <select onClick={handleselectstatus} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <select onChange={handleselectstatus} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                                     <option value="nothing">Select task status</option>
                                     <option value="pending"> Pending </option>
                                     <option value="completed">Completed</option>
@@ -347,7 +358,7 @@ const Taskpage = () => {
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-start text-gray-900">
                                     Priority
                                 </label>
-                                <select onClick={handleselectpriority} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <select onChange={handleselectpriority} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                                     <option value="nothing">Select Priority </option>
                                     <option value="low"> Low </option>
                                     <option value="medium">Medium</option>
@@ -356,7 +367,7 @@ const Taskpage = () => {
 
                             </div>
 
-                            <div class="mb-4">
+                            <div className="mb-4">
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-start text-gray-900">
                                     Select Due Date
                                 </label>

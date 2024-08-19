@@ -85,9 +85,9 @@ const Card = (props) => {
     const handlesubmit = async (e) => {
         e.preventDefault()
 
-        if ((status == "nothing") || (priority == "nothing") || (duedate == "nothing")) {
-            return notify2()
-        }
+        // if ((status == "nothing") || (priority == "nothing") ) {
+        //     return notify2()
+        // }
 
 
 
@@ -195,7 +195,7 @@ const Card = (props) => {
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-start text-gray-900">
                                     Status
                                 </label>
-                                <select onClick={handleselectstatus} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <select onChange={handleselectstatus} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                                     <option value="nothing">Select task status</option>
                                     <option value="pending"> Pending </option>
                                     <option value="completed">Completed</option>
@@ -208,7 +208,7 @@ const Card = (props) => {
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-start text-gray-900">
                                     Priority
                                 </label>
-                                <select onClick={handleselectpriority} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <select onChange={handleselectpriority} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                                     <option value="nothing">Select Priority </option>
                                     <option value="low"> Low </option>
                                     <option value="medium">Medium</option>
@@ -245,7 +245,7 @@ const Card = (props) => {
                 data.length > 0 ? (
                     <div className='grid    sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xs:grid-cols-2 gap-2 w-11/12 m-auto pb-4'>
                         {data.map((item, index) => (
-                            <div key={index} style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }} className='p-7 bg-blue-700 min-h-[170px] flex flex-col justify-between text-white rounded-md'>
+                            <div key={index} style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }} className='p-7 bg-blue-900 min-h-[170px] flex flex-col justify-between text-white rounded-md'>
 
                                 <span
                                     className={`text-start w-fit  text-sm font-bold p-2 mb-2 rounded ${item.priority === "high"

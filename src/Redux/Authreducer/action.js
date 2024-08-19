@@ -16,6 +16,20 @@ const notify = () => toast.success(' User logged in Successfully', {
 })
 
 
+const notify2= () => toast.error('User Not Found. !', {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "dark",
+  Transition:Zoom
+
+
+})
+
 export const login = (details) => async (dispatch) => {
 
   dispatch({ type: LOGIN_REQUEST });
@@ -32,6 +46,7 @@ export const login = (details) => async (dispatch) => {
     if(res.status == 200){
       dispatch({type:LOGIN_SUCCESS, payload: token})
       notify()
+    
     }
 
 
@@ -46,7 +61,7 @@ export const login = (details) => async (dispatch) => {
     
   } catch (err) {
     dispatch({ type: LOGIN_FAILURE });
-    alert(err.response.data.message);
+  notify2()
   }
 
 };
